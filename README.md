@@ -19,8 +19,8 @@
 [![Discord](https://img.shields.io/discord/1313767817996402698?style=flat&logo=discord&logoColor=white&label=Discord&color=white)][discord-url]
 
 ![TypeScript](https://img.shields.io/badge/TypeScript-%230db7ed.svg?style=flat&logo=typescript&logoColor=white)
-![React](https://img.shields.io/badge/Express-%230db7ed.svg?style=flat&logo=express&logoColor=white)
-![Python](https://img.shields.io/badge/Redis-%230db7ed.svg?style=flat&logo=Redis&logoColor=white)
+![React](https://img.shields.io/badge/React-%230db7ed.svg?style=flat&logo=react&logoColor=white)
+![Python](https://img.shields.io/badge/Socket.IO-%230db7ed.svg?style=flat&logo=socket.io&logoColor=white)
 ![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)
 
 </div>
