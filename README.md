@@ -1,73 +1,87 @@
-# React + TypeScript + Vite
+# Research Engine
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<div align="center">
+  <img src="./assets/banner.png" height="296" alt="Project Banner">
+</div>
 
-Currently, two official plugins are available:
+<br>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+<div align="center">
 
-## React Compiler
+[![Contributors](https://img.shields.io/github/contributors/Homies-Tech-Innovation/research-engine-server?color=white&style=flat)][contributors-url]
+[![Forks](https://img.shields.io/github/forks/Homies-Tech-Innovation/research-engine-server?color=white&style=flat)][forks-url]
+[![Stars](https://img.shields.io/github/stars/Homies-Tech-Innovation/research-engine-server?color=white&style=flat)][stars-url]
+[![Open Issues](https://img.shields.io/github/issues/Homies-Tech-Innovation/research-engine-server?color=white&style=flat)][issues-url]
+[![Closed Issues](https://img.shields.io/github/issues-closed/Homies-Tech-Innovation/research-engine-server?color=white&style=flat)][closed-issues-url]
+[![Open PRs](https://img.shields.io/github/issues-pr/Homies-Tech-Innovation/research-engine-server?color=white&style=flat)][prs-url]
+[![Closed PRs](https://img.shields.io/github/issues-pr-closed/Homies-Tech-Innovation/research-engine-server?color=white&style=flat)][closed-prs-url]
+[![License](https://img.shields.io/github/license/Homies-Tech-Innovation/research-engine-server?color=white&style=flat)][license-url]
+[![Discord](https://img.shields.io/discord/1313767817996402698?style=flat&logo=discord&logoColor=white&label=Discord&color=white)][discord-url]
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+![TypeScript](https://img.shields.io/badge/TypeScript-%230db7ed.svg?style=flat&logo=typescript&logoColor=white)
+![React](https://img.shields.io/badge/Express-%230db7ed.svg?style=flat&logo=express&logoColor=white)
+![Python](https://img.shields.io/badge/Redis-%230db7ed.svg?style=flat&logo=Redis&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-%230db7ed.svg?style=flat&logo=docker&logoColor=white)
 
-## Expanding the ESLint configuration
+</div>
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+**Research Engine** is an AI-assisted research workflow that combines web search, data storage, and structured collaboration between the user and the model. It is designed to help gather information, organize it, and generate useful written outputs based on the collected material.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+**Client Repo Link:** [Research Engine Client](https://github.com/Homies-Tech-Innovation/research-engine-server-client)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## Features
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Web Search
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+The system can perform targeted web searches to gather information relevant to the user’s research topic.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Vector Database Storage
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+All retrieved data can be stored in a vector database.
+
+- Users can browse and review stored items manually.
+- The AI can reference this data during conversations or reasoning through Retrieval-Augmented Generation (RAG).
+
+### Context-Aware Conversations
+
+The AI can use the stored information to discuss the topic, answer questions, and provide insights grounded in collected data.
+
+### AI-Generated Artifacts
+
+Users can request written outputs—such as summaries, reports, or drafts—which the AI generates based on the stored materials. These artifacts can then be edited by the user.
+
+### Structured Research Flow
+
+This system follows a guided process to ensure clarity and relevance throughout the research:
+
+1. **Topic Drafting**
+   Before any searching begins, the user and AI refine and define the research topic together. This step establishes the context needed for accurate and meaningful results.
+2. **Data Collection**
+   After the topic is defined, the AI plans how to search the web effectively for that subject.
+3. **Selective Storage**
+   As information is retrieved, each piece is evaluated. The user and AI decide whether to store the data in the vector database or discard it.
+
+## Contributors
+
+A huge thank you to all our amazing contributors who have helped make Research Engine better! We appreciate every contribution, whether it's code, documentation, design, or community support.
+
+<a href="https://github.com/Homies-Tech-Innovation/research-engine-server/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Homies-Tech-Innovation/research-engine-server&max=100&columns=20&v=1" alt="Contributors" />
+</a>
+
+Want to see your profile here? Check out our [open issues](./issues) and start contributing today!
+
+Made with ❤️ by the Community
+
+<!-- Shields Configuration -->
+
+[contributing-url]: ./CONTRIBUTING.md
+[contributors-url]: ./graphs/contributors
+[forks-url]: ./network/members
+[stars-url]: ./stargazers
+[issues-url]: ./issues
+[closed-issues-url]: ./issues?q=is%3Aissue+is%3Aclosed
+[prs-url]: ./pulls
+[closed-prs-url]: ./pulls?q=is%3Apr+is%3Aclosed
+[license-url]: ./LICENSE
+[discord-url]: https://discord.com/invite/HP2YPGSrWU
